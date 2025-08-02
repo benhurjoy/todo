@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+    padding: 20px;
+}
+
+.innerbox {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3), 0 0 80px rgba(255, 0, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00fff7;
+    text-shadow: 0 0 10px #00ffe7;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #00fff7;
+    margin-bottom: 20px;
+    outline: none;
+    box-shadow: 0 0 10px #00ffe7;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 15px #00ffe7, 0 0 5px #fff inset;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin: 10px 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+.add_btn {
+    background: linear-gradient(to right, #00ffc3, #00bfff);
+}
+
+.display_btn {
+    background: linear-gradient(to right, #ff00d4, #ff6ec4);
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+#taskdisplay {
+    margin-top: 30px;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+tr {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+td {
+    color: #e0e0e0;
+    font-size: 1rem;
+    flex: 1;
+    text-align: center;
+    word-break: break-word;
+}
+
+.del {
+    background: #ff1a1a;
+}
+
+.del:hover {
+    background: #ff4d4d;
+}
+
+button:not(.add_btn):not(.display_btn):not(.del) {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    color: #00ffe7;
+}
+
+button:not(.add_btn):not(.display_btn):not(.del):hover {
+    background: rgba(0, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Smooth entrance animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
